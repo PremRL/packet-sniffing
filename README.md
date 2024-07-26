@@ -24,7 +24,7 @@ The following test environments are required to work with this project:
 3. Two test endpoints, running either Linux or Windows OS.
 4. Four QSFP28 transceivers and two MPO-to-MPO cables for two 100Gbps connections. 
 
-When this system is running, the two endpoints are connected via this framework. with this setup, either endpoint will not know that there's a man-in-the-middle and can normally communicate with each other. Not only can the framework receive and forware network packets in both directions, but also it can log the traffic ingressing in both directions. This is achieved by using a host memory DMA method of the Vitis platform for transferring desired network packets to a specific memory location in the host memory. The software application on the host machine can then access this particular memory to store it permanently in the server or to investigate it.
+When this system is running, the two endpoints are connected via this framework. With this setup, either endpoint will not know that there's a man-in-the-middle and can normally communicate with each other. Not only can the framework receive and forware network packets in both directions, but also it can log the traffic ingressing in both directions. This is achieved by using a host memory DMA method of the Vitis platform for transferring desired network packets to a specific memory location in the host memory. The software application on the host machine can then access this particular memory to store it permanently in the server or to investigate it.
 
 
 The logic behide this is the hardware includes three kernels - one ethernet kernel and two traffic kernels. As depicted below, the ethernet kernel is an RTL kernel, written in Verilog, responsible for handling two 100Gpbs physical layers, dealing with clock crossing, and splitting the traffic into four AXI-stream interfaces. The first traffic kernel named traffic_0to1 receives the ingressing network traffic of channel#1 and then forwards it to the egressing channel#2. Conversely, the other traffic kernel called traffic_1to0 receives the traffic from channel#2 and then forwards it to the channel#1. Furthermore, the software application can set specific rules for these traffic kernels to capture rule-matching packets in the host memory using AXI interface. It is worth noting that these traffic kernels use a single source code, developed using Vitis HLS.
@@ -246,4 +246,4 @@ ___
 4. Loading an XCLBIN file should not be done by the host application because the hardware should be free-running and the software can be called multiple times. However, an efficient XRT native API for connecting to the device without loading an XCLBIN has not been found.
 5. Other Alveo cards, such as U250, can utilise this framework.
 
-Thank you for your participation in this project, and we hope that you can put our work to good use.
+Thank you for your participation in this project, and I hope that you can put the work to good use.
