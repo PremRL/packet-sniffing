@@ -142,7 +142,7 @@ set_property -dict [list CONFIG.TDATA_NUM_BYTES {64} CONFIG.TUSER_WIDTH {1} CONF
 # Creating RTL kernel 
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
-ipx::package_project -root_dir $path_to_packaged -vendor dgway.com -library rtlkernel -version 1.0 -taxonomy /KernelIP -import_files -set_current false
+ipx::package_project -root_dir $path_to_packaged -vendor none -library rtlkernel -version 1.0 -taxonomy /KernelIP -import_files -set_current false
 ipx::unload_core $path_to_packaged/component.xml
 ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory $path_to_packaged $path_to_packaged/component.xml
 set_property core_revision 1 [ipx::current_core]

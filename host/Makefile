@@ -5,8 +5,6 @@ endif
 XRT_LIB := -lxrt_core -lxrt_coreutil 
 INCLUDES := -I$(XILINX_XRT)/include
 
-#g++ -g -std=c++1y -I"/opt/xilinx/xrt"/include  -o all host.cpp -L"/opt/xilinx/xrt"/lib -lOpenCL -lxrt_core -lxrt_coreutil -lrt -luuid
-
 # Set project directory one level above of Makefile directory. $(CURDIR) is a GNU make variable containing the path to the current working directory
 PROJDIR := $(realpath $(CURDIR))
 SOURCEDIR := $(PROJDIR)
