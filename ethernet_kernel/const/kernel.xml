@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root versionMajor="1" versionMinor="6">
-    <kernel name="eth_kernel" language="ip" vlnv="none:kernel:eth_kernel:1.0" attributes="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" interrupt="true">
+    <kernel name="eth_kernel" language="ip" vlnv="no_vendor:kernel:eth_kernel:1.0" attributes="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" interrupt="true">
         <ports>
             <port name="s_axi_ctrl"     mode="slave"  range="0x1000"    dataWidth="32" portType="addressable" base="0x0"/>
             <port name="rx0_axis"       mode="write_only"               dataWidth="512" portType="stream"/>
