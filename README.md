@@ -1,7 +1,10 @@
 # packet-sniffing
 This project provides an FPGA networking framework on the Alveo platform using the Vitis flow. This framework connects two 100Gbps network endpoints together while also able capturing the network traffic passing through the card. It is an excellent starting point for those unfamiliar with Vitis HLS, as this project includes an example of network processing.
 
-I would like to thank “Design Gateway (Thailand)” for providing the test environment and support throughout this project. More information about them can be found at [DesignGateway](https://dgway.com/index_E.html).
+I would like to thank “Design Gateway (Thailand)” for providing the test environment and support throughout this project. They offer a range of general FPGA solutions as well as valuable insights into HLS development. More information about their products can be found at [Design Gateway's solutions](https://dgway.com/solutions.html), and the details of HLS development can be found at [HLS Development Series](https://dgway.com/blog_E/category/hls-development-series/).
+
+<img src="./docs/DG-logo.png" width="640" height="300">
+
 
 Additionally, this project could have not completed without [AMD-Xilinx Vitis Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/2024.1), and I am grateful for being provided with such examples.
 
